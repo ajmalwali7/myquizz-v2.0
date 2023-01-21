@@ -31,7 +31,7 @@ export function App() {
         fetch(apiUrl)
         .then(response => response.json())
         .then(json => (setQuesArray(json.results)))
-    }, [count]);
+    }, [count,apiUrl]);
 
     const handleForm = (e) => {
         e.preventDefault();

@@ -20,7 +20,7 @@ export function About(){
                     About Ajmal Wali:
                 </h3>
                 <p className="text-xl mt-1">
-                    Hi, I am Ajmal Wali. I am a Computer Science student, and I like to work with new technologies. Web Development, Blockchain, Artificial Intelligence, Machine Learning and Software Engineering are the topics that interest me the most. I hope you like our website and enjoy it.<br/>Thanks a lot for visiting.<br/>You can follow me on twitter right <a className="text-blue-700 underline hover:text-blue-400" target={'_blank'} href="https://twitter.com/ajmalwali7">here.</a>
+                    Hi, I am Ajmal Wali. I am a Computer Science student, and I like to work with new technologies. Web Development, Blockchain, Artificial Intelligence, Machine Learning and Software Engineering are the topics that interest me the most. I hope you like our website and enjoy it.<br/>Thanks a lot for visiting.<br/>You can follow me on twitter right <a className="text-blue-700 underline hover:text-blue-400" target={'_blank'} rel='noopener noreferrer' href="https://twitter.com/ajmalwali7">here.</a>
                 </p>
             </div>
             
