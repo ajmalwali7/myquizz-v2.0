@@ -1,5 +1,5 @@
 # Quizzical v2.0
-Quizzical v2.0 is a modified version of myQuizz web application. I have added some more functionalities to this one. Which is that you can select which type of quiz you want to take, so this is a more fun web app than the other one.
+Quizzical v2.0 is a modified version of myQuizz web application. I have added some more functionalities to this one. Which is that you can select which type of quiz you want to take, so this is a more fun web app than the other one. You can find the previous version a myQuiz repository on my profile.
 
 
 # About Quizzical v2.0
