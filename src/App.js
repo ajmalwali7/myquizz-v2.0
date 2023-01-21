@@ -53,9 +53,16 @@ export function App() {
             let ansArr=[];
             let corAns = 0;
             for (let i=0; i<randArr.length; i++){
-                for(let j=0; j<4; j++){
-                    if(arr.children[i].children[1].children[j].classList.contains('selected'))
-                        ansArr.push((arr.children[i].children[1].children[j].id[1])-0);
+                if(arr[i].children[1].id.length>4){
+                    for(let j=0; j<4; j++){
+                        if(arr[i].children[1].children[j].classList.contains('selected'))
+                            ansArr.push((arr[i].children[1].children[j].id[2])-0);
+                    }
+                }else{
+                    for(let j=0; j<4; j++){
+                        if(arr[i].children[1].children[j].classList.contains('selected'))
+                            ansArr.push((arr[i].children[1].children[j].id[1])-0);
+                    }
                 }
                 if(!(ansArr.length===i+1))
                     ansArr.push(-1);
@@ -70,7 +77,6 @@ export function App() {
                     document.getElementById(`${i}${randArr[i]}`).classList.add('emptyCorrect')
                 }
                 else{
-                    
                     document.getElementById(`${i}${ansArr[i]}`).classList.remove('selected')
                     document.getElementById(`${i}${ansArr[i]}`).classList.add('wrong')
                     document.getElementById(`${i}${randArr[i]}`).classList.add('emptyCorrect')

@@ -5,7 +5,13 @@ export function Quiz(props) {
     if(props.qs.length===0){return(<Loading />)}
     const randArr = props.randArr;
     const clicked = (id) => {
-        const parentEl = document.getElementById(`ans${id[0]}`)
+        let parentEl = '';
+        if (id>99){
+            parentEl = document.getElementById(`ans${id[0]}${id[1]}`);
+        }else{
+            parentEl = document.getElementById(`ans${id[0]}`);
+        }
+        
         const clickedEl = document.getElementById(id)
         for (let i=0; i<4; i++){
             if(parentEl.children[i].classList.contains('wrong') || parentEl.children[i].classList.contains('correct') || parentEl.children[i].classList.contains('emptyCorrect')){
@@ -44,7 +50,7 @@ export function Quiz(props) {
             </div>
             <div className='btnContainer'>
                 {(props.msgs.length>0) && <h3 className='msg font-bold text-xl'>{props.msgs}</h3>}
-                <button className='btn butt-1' onClick={() => props.func(document.getElementById('quizes'), randArr)}>{props.butns}</button>
+                <button className='btn butt-1' onClick={() => props.func(document.getElementById('quizes').children, randArr)}>{props.butns}</button>
                 {(props.msgs.length>0) && <button className='btn butt-1' onClick={() => props.nav('form')}>Change Quiz</button>}
             </div>
         </div>
