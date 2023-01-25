@@ -102,7 +102,7 @@ export function App() {
                 <Route path='*' element={<Missing />} />
             </Route>
         </Routes>
-        {!document.URL.includes('quiz') && <Footer />}
+        {!document.URL.includes('/quiz') && <Footer />}
         </>
     );
 }
