@@ -1,6 +1,4 @@
 import React from 'react';
-import { Footer } from './Footer';
-
 
 export function Form(props){
     return(
@@ -40,7 +38,6 @@ export function Form(props){
                 {/*<button className='btn' onClick={()=>{}}>Start Quiz</button>*/}
                 <button className='btn' type={'submit'}>Start Quiz</button>
             </form>
-            <Footer />
         </div>
     );
 }

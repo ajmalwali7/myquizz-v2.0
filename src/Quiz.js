@@ -36,11 +36,11 @@ export function Quiz(props) {
                     opsArr.splice(randArr[props.qs.indexOf(q)],0,q.correct_answer)
                     return(<div className='q' key={props.qs.indexOf(q)}>
                         <div className='question font-bold text-xl'>
-                            <h3>{parser.parseFromString(q.question,'text/html').children[0].children[1].innerHTML}</h3>
+                            <h3>{parser.parseFromString(q.question,'text/html').children[0].children[1].innerHTML.replace(/&amp;/g,'&')}</h3>
                         </div>
                         <div className='answers' id={`ans${props.qs.indexOf(q)}`}>
                             {opsArr.map(a => {
-                                return(<p className='option' id={`${props.qs.indexOf(q)}${opsArr.indexOf(a)}`} key={opsArr.indexOf(a)} onClick={()=>{clicked(`${props.qs.indexOf(q)}${opsArr.indexOf(a)}`)}}>{parser.parseFromString(a,'text/html').children[0].children[1].innerHTML}</p>)
+                                return(<p className='option' id={`${props.qs.indexOf(q)}${opsArr.indexOf(a)}`} key={opsArr.indexOf(a)} onClick={()=>{clicked(`${props.qs.indexOf(q)}${opsArr.indexOf(a)}`)}}>{parser.parseFromString(a,'text/html').children[0].children[1].innerHTML.replace(/&amp;/g,'&')}</p>)
                             })
                             }
                         </div>

@@ -7,6 +7,7 @@ import { Layout } from './Layout'
 import { Form } from './Form';
 import { About } from './About'
 import { Missing } from './Missing';
+import { Footer } from "./Footer";
 
 export function App() {
     const rand = () => {return(Math.floor(Math.random()*4))};
@@ -90,8 +91,8 @@ export function App() {
             setButn({butn:'Check Answers', msg:''});
         }
     }
-
   return (
+        <>
         <Routes>
             <Route path='/' element={<Layout />}>
                 <Route index element={<Intro func={navigat} />} />
@@ -99,8 +100,9 @@ export function App() {
                 <Route path='about' element={<About />} />
                 <Route path='quiz' element={<Quiz qs={questionsArray} randArr={randArr} butns={butn} msgs={msg} func={checkAnswers} nav={navigat}/>} />
                 <Route path='*' element={<Missing />} />
-
             </Route>
         </Routes>
+        {!document.URL.includes('quiz') && <Footer />}
+        </>
     );
 }
